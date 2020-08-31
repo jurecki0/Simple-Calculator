@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Simple Calculator</string>
+    <string name="add">+</string>
+    <string name="equals">=</string>
+    <string name="enter_a_number_here">Enter a number here...</string>
+    <string name="substract">-</string>
+</resources>
