@@ -4,4 +4,7 @@
     <string name="equals">=</string>
     <string name="enter_a_number_here">Enter a number here...</string>
     <string name="substract">-</string>
+    <string name="division">/</string>
+    <string name="multiplication">x</string>
+    <string name="defaultValue">0</string>
 </resources>

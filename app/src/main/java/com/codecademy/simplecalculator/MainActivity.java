@@ -23,21 +23,28 @@ public class MainActivity extends AppCompatActivity {
         final RadioGroup operators = findViewById(R.id.operators);
         final RadioButton add = findViewById(R.id.add);
         final RadioButton substract = findViewById(R.id.substract);
+        final RadioButton multiplication = findViewById(R.id.multiplication);
+        final RadioButton division = findViewById(R.id.division);
         final Button equals = findViewById(R.id.equals);
         final TextView result = findViewById(R.id.result);
 
         equals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final int firstNumberValue = Integer.parseInt(firstNumber.getText().toString());
-                final int secondNumberValue = Integer.parseInt(secondNumber.getText().toString());
+                final double firstNumberValue = Double.parseDouble(firstNumber.getText().toString());
+                final double secondNumberValue = Double.parseDouble(secondNumber.getText().toString());
 
                 int operatorButtonId = operators.getCheckedRadioButtonId();
 
-                Integer answer;
+                Double answer;
                 if(operatorButtonId == add.getId()) {
                     answer = firstNumberValue + secondNumberValue;
-                } else {
+                } else if(operatorButtonId == multiplication.getId()) {
+                    answer = firstNumberValue * secondNumberValue;
+                } else if(operatorButtonId == division.getId()) {
+                    answer = firstNumberValue / secondNumberValue;
+                }
+                else {
                     answer = firstNumberValue - secondNumberValue;
                 }
 
